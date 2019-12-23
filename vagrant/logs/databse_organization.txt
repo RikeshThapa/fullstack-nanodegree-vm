@@ -1,0 +1,28 @@
+Database structure:
+
+Database news data comprised of 3tables:
+- articles:
+  - includes information about the authors of articles
+  - fields:
+    - author: foreign key into author
+    - title: of article
+    - slug:
+    - lead:
+    - body:
+    - time: default now()
+    - id:
+- authors:
+  - includes the articles themselves
+  - fields:
+    - name : name of author
+    - bio: bio of author
+    - id: private key of author
+- log:
+  - includes one entry each time a user has accessed the site
+  - fields:
+    - path:
+    - ip: ip address of accessing user
+    - method: GET?
+    - status: request status (successful login 200, etc)
+    - time: timestamp
+    - id: private key?
